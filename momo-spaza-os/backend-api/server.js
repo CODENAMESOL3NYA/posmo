@@ -10,11 +10,15 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Routes
+const momoRoutes = require('./src/routes/momoRoutes');
+app.use('/api/momo', momoRoutes);
+
 // Health Check Endpoint
 app.get('/api/health', (req, res) => {
     res.status(200).json({ 
         status: 'success', 
-        message: 'MoMo Spaza OS Backend is running flawlessly.',
+        message: 'MoMo Spaza OS Backend is running sexxxyyy.',
         timestamp: new Date().toISOString()
     });
 });
